@@ -11,6 +11,7 @@ html {
 }
 p{
   color: white;
+  font-size: 2rem;
 }
 button{
   display:inline-block;
@@ -26,6 +27,7 @@ button{
   text-align:center;
   transition: all 0.2s;
   cursor: pointer;
+  font-size: 1rem;
   }
 button:hover{
   color:pink;
