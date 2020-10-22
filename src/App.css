@@ -11,7 +11,7 @@ html {
 }
 p{
   color: white;
-  font-size: 6rem;
+  font-size: 5rem;
 }
 button{
   display:inline-block;
@@ -22,12 +22,12 @@ button{
   box-sizing: border-box;
   text-decoration:none;
   font-family:'Roboto',sans-serif;
-  font-weight:500;
+  font-weight:400;
   color:#FFFFFF;
   text-align:center;
   transition: all 0.2s;
   cursor: pointer;
-  font-size: 4rem;
+  font-size: 3rem;
   }
 button:hover{
   color:rgb(160, 225, 235);
