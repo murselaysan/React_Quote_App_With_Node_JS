@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useEffect,useState} from 'react';
+
 import './App.css';
 
 function App() {
+  const [result,setResult] = useState()
+  
+  useEffect(() => {fetchData();}, []);
+
+  const fetchData = async () => {
+  
+  fetch("https://mursel-quote-server.glitch.me/quotes/random")
+  .then(res =>res.json())
+  .then((result) => {setResult(result)})}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <p>{result && result.quote}</p>
+     <p> {result  && result.author}</p>
+    
+     <button onClick = {fetchData} >Get Quote</button>
     </div>
   );
 }
